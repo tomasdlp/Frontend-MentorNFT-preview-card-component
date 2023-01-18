@@ -13,7 +13,6 @@
 }
 body {
   font-family: "Outfit", sans-serif;
-  font-size: 1.125rem;
 }
 .main {
   min-width: 100vw;
@@ -24,10 +23,9 @@ body {
 }
 .section {
   display: grid;
-  max-width: 600px;
   width: fit-content;
   place-content: center;
-  grid-template-columns: repeat(2, 150px);
+  grid-template-columns: repeat(2, 11rem);
   grid-auto-rows: minmax(2rem, auto);
   grid-template-areas:
     "image image"
@@ -37,7 +35,7 @@ body {
     "autor autor";
   background-color: var(--very-dark-blue-card);
   color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 1rem;
 }
 .item {
@@ -49,14 +47,21 @@ body {
 .item-1 img {
   width: 100%;
   height: 100%;
+  border-radius: 0.5rem;
 }
 .item-2 {
   grid-area: info;
 }
 .item-2 h1 {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  line-height: 1.7325rem;
+}
+.item-2 p {
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: var(--soft-blue);
+  line-height: 1.625rem;
 }
 .item-3 {
   grid-area: price;
@@ -74,12 +79,38 @@ body {
 .item-3 div.relojito {
   justify-self: end;
 }
+.item-3 span.date {
+  color: var(--soft-blue);
+}
 .item-4 {
   grid-area: autor;
+  position: relative;
+  height: 2.0625rem;
+}
+.item-4 span.span-container {
+  font-size: 1rem;
+  position: absolute;
+  display: inline-block;
+  width: 90%;
+  color: var(--soft-blue);
+  top: 6.5px;
+}
+.item-4 .name-autor {
+  color: white;
 }
 .item-4 img {
-  width: 32px;
-  vertical-align: middle;
+  width: 33px;
   border: 1px solid white;
-  border-radius: 15rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+@media screen and (max-width: 400px) {
+  .section {
+    grid-template-columns: repeat(2, minmax(8rem, 9rem));
+  }
+}
+@media screen and (max-width: 400px) {
+  .section {
+    grid-template-columns: repeat(2, minmax(7rem, 8rem));
+  }
 }
