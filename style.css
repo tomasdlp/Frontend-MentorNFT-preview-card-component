@@ -13,4 +13,73 @@
 }
 body {
   font-family: "Outfit", sans-serif;
+  font-size: 1.125rem;
+}
+.main {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--very-dark-blue-main);
+  display: grid;
+  place-content: center;
+}
+.section {
+  display: grid;
+  max-width: 600px;
+  width: fit-content;
+  place-content: center;
+  grid-template-columns: repeat(2, 150px);
+  grid-auto-rows: minmax(2rem, auto);
+  grid-template-areas:
+    "image image"
+    "image image"
+    "info info"
+    "price price"
+    "autor autor";
+  background-color: var(--very-dark-blue-card);
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.item {
+  margin-bottom: 1rem;
+}
+.item-1 {
+  grid-area: image;
+}
+.item-1 img {
+  width: 100%;
+  height: 100%;
+}
+.item-2 {
+  grid-area: info;
+}
+.item-2 h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.item-3 {
+  grid-area: price;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--very-dark-blue-line);
+  padding-bottom: 1rem;
+  height: fit-content;
+}
+.item-3 div span.saldo {
+  color: var(--cyan);
+  font-size: 1.125rem;
+  font-weight: 200;
+}
+.item-3 div.relojito {
+  justify-self: end;
+}
+.item-4 {
+  grid-area: autor;
+}
+.item-4 img {
+  width: 32px;
+  vertical-align: middle;
+  border: 1px solid white;
+  border-radius: 15rem;
 }
