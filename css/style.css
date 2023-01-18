@@ -26,7 +26,6 @@ body {
   width: fit-content;
   place-content: center;
   grid-template-columns: repeat(2, 11rem);
-  grid-auto-rows: minmax(2rem, auto);
   grid-template-areas:
     "image image"
     "image image"
@@ -48,6 +47,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
+  object-fit: contain;
 }
 .item-2 {
   grid-area: info;
@@ -112,5 +112,6 @@ body {
 @media screen and (max-width: 400px) {
   .section {
     grid-template-columns: repeat(2, minmax(7rem, 8rem));
+    padding: 1rem;
   }
 }
